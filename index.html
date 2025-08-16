@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdumz - Vacation Rentals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-container">
+        <div class="hero-background">
+            <div class="castle-silhouette"></div>
+            <div class="dragon-flying"></div>
+        </div>
+        
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">🐉</div>
+                <h1>Kingdumz</h1>
+            </div>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#locations">Locations</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main class="hero-content">
+            <div class="hero-text">
+                <h2>Welcome to the Kingdom</h2>
+                <p>Discover extraordinary vacation rentals in magical destinations</p>
+            </div>
+            
+            <div class="search-container">
+                <h3>Where do you want to go?</h3>
+                <div class="search-box">
+                    <input type="text" id="location-search" placeholder="Search destinations..." autocomplete="off">
+                    <button type="button" class="search-btn">🔍</button>
+                </div>
+                
+                <div class="popular-locations">
+                    <h4>Popular Destinations</h4>
+                    <div class="location-cards">
+                        <div class="location-card" onclick="window.location.href='https://fredonia.kingdumz.com'">
+                            <div class="location-image la-image"></div>
+                            <div class="location-info">
+                                <h5>Los Angeles</h5>
+                                <p>The Kingdom of Fredonia</p>
+                                <span class="location-badge">🏰</span>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card" onclick="window.location.href='https://karaka.kingdumz.com'">
+                            <div class="location-image nz-image"></div>
+                            <div class="location-info">
+                                <h5>New Zealand</h5>
+                                <p>Karaka Retreat</p>
+                                <span class="location-badge">🏔️</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Kingdumz</h2>
+            <p>Experience luxury vacation rentals in the most enchanting locations. Each property is carefully curated to provide you with a royal experience, complete with modern amenities and breathtaking views.</p>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">👑</div>
+                    <h3>Royal Experience</h3>
+                    <p>Premium accommodations fit for royalty</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🐉</div>
+                    <h3>Magical Destinations</h3>
+                    <p>Unique locations with extraordinary charm</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏰</div>
+                    <h3>Castle Comfort</h3>
+                    <p>Luxury meets adventure in every stay</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="locations" class="locations-section">
+        <div class="container">
+            <h2>Our Kingdoms</h2>
+            <div class="locations-grid">
+                <div class="location-detail" onclick="window.location.href='https://fredonia.kingdumz.com'">
+                    <div class="location-hero la-hero"></div>
+                    <div class="location-content">
+                        <h3>The Kingdom of Fredonia</h3>
+                        <p>Los Angeles, California</p>
+                        <p class="description">Experience luxury living in the heart of LA with stunning city views and modern amenities.</p>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                
+                <div class="location-detail" onclick="window.location.href='https://karaka.kingdumz.com'">
+                    <div class="location-hero nz-hero"></div>
+                    <div class="location-content">
+                        <h3>Karaka Retreat</h3>
+                        <p>New Zealand</p>
+                        <p class="description">Immerse yourself in the natural beauty of New Zealand with breathtaking mountain views.</p>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon">🐉</div>
+                        <h3>Kingdumz</h3>
+                    </div>
+                    <p>Your gateway to extraordinary vacation experiences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@kingdumz.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kingdumz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kingdom of Fredonia - Kingdumz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .property-hero {
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .property-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><path fill="%23ffffff" opacity="0.1" d="M0,400 L0,300 L100,300 L100,250 L200,250 L200,200 L300,200 L300,150 L400,150 L400,200 L500,200 L500,250 L600,250 L600,300 L700,300 L700,250 L800,250 L800,200 L900,200 L900,250 L1000,250 L1000,300 L1100,300 L1100,250 L1200,250 L1200,400 Z"/></svg>') no-repeat bottom center;
+            background-size: contain;
+        }
+        
+        .property-hero-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .property-hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .property-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .back-home:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .property-details {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .property-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .property-info h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 1.5rem;
+        }
+        
+        .property-info p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .property-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e3c72;
+            font-weight: 500;
+        }
+        
+        .booking-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .booking-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .booking-widget {
+            margin-top: 2rem;
+        }
+        
+        .airbnb-link {
+            display: inline-block;
+            background: #ff5a5f;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .airbnb-link:hover {
+            background: #e31c5f;
+            transform: translateY(-2px);
+        }
+        
+        .location-info-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            margin-top: 2rem;
+        }
+        
+        .location-info-box h4 {
+            font-family: 'Cinzel', serif;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .property-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .property-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .property-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">🐉</div>
+            <h1>Kingdumz</h1>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="#property">Property</a>
+            <a href="#booking">Book Now</a>
+        </nav>
+    </header>
+
+    <section class="property-hero">
+        <div class="property-hero-content">
+            <h1>The Kingdom of Fredonia</h1>
+            <p>Los Angeles, California</p>
+            <a href="index.html" class="back-home">🏰 Back to Kingdumz</a>
+        </div>
+    </section>
+
+    <section id="property" class="property-details">
+        <div class="container">
+            <div class="property-grid">
+                <div class="property-info">
+                    <h2>Welcome to Your Royal Retreat</h2>
+                    <p>Experience luxury living in the heart of Los Angeles at The Kingdom of Fredonia. This stunning property offers the perfect blend of modern comfort and royal elegance, with breathtaking city views and world-class amenities.</p>
+                    
+                    <div class="property-features">
+                        <div class="feature-item">
+                            <span>👑</span>
+                            <span>Luxury Accommodation</span>
+                        </div>
+                        <div class="feature-item">
+                            <span>🌆</span>
+                            <span>City Views</span>
+                        </div>
+                        <div class="feature-item">
+                            <span>🏊‍♂️</span>
+                            <span>Pool Access</span>
+                        </div>
+                        <div class="feature-item">
+                            <span>🚗</span>
+                            <span>Free Parking</span>
+                        </div>
+                        <div class="feature-item">
+                            <span>📶</span>
+                            <span>High-Speed WiFi</span>
+                        </div>
+                        <div class="feature-item">
+                            <span>🏋️‍♂️</span>
+                            <span>Fitness Center</span>
+                        </div>
+                    </div>
+                    
+                    <div class="location-info-box">
+                        <h4>📍 Location Highlights</h4>
+                        <p>Located in the vibrant heart of Los Angeles, The Kingdom of Fredonia offers easy access to:</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem; color: #666;">
+                            <li>World-famous shopping and dining</li>
+                            <li>Cultural attractions and museums</li>
+                            <li>Entertainment venues and theaters</li>
+                            <li>Public transportation hubs</li>
+                            <li>Beautiful parks and outdoor spaces</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="booking-section">
+                    <h3>Book Your Stay</h3>
+                    <p style="text-align: center; color: #666; margin-bottom: 1rem;">
+                        Check availability and reserve your royal experience
+                    </p>
+                    
+                    <div class="booking-widget">
+                        <iframe 
+                            id="booking-iframe" 
+                            sandbox="allow-top-navigation allow-scripts allow-same-origin" 
+                            style="width: 100%; height: 600px" 
+                            frameborder="0" 
+                            src="https://booking.hospitable.com/widget/9fa63366-8841-41ff-b4be-0f7c137036b4/1948422">
+                        </iframe>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <a href="https://www.airbnb.com/rooms/1214080917428111160?guests=1&adults=1&s=67&unique_share_id=357373ee-8e3c-4286-985c-844547fa36fa" 
+                           class="airbnb-link" target="_blank">
+                            View on Airbnb
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon">🐉</div>
+                        <h3>Kingdumz</h3>
+                    </div>
+                    <p>Your gateway to extraordinary vacation experiences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@kingdumz.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kingdumz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
